@@ -1,4 +1,6 @@
 import React from 'react';
+
+import '../styles/components/Form.scss';
 import PropTypes from 'prop-types';
 import FormField from './FormField'; 
 
@@ -7,6 +9,7 @@ const Form = ({updateInput, addToLibrary, input}) => {
         <div>
             <form onSubmit={event => {
                 event.preventDefault();
+                console.log(input);
                 addToLibrary(input);
             }}>
                 <FormField 

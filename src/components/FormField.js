@@ -1,4 +1,6 @@
 import React from 'react';
+
+import '../styles/components/Form.scss';
 import PropTypes from 'prop-types';
 
 class FormField extends React.Component{
@@ -20,6 +22,7 @@ class FormField extends React.Component{
                         name={name}
                         placeholder={label}
                         onChange={handleChange}
+                        required
                     />
                 </label>
             </div>

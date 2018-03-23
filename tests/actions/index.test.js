@@ -1,4 +1,4 @@
-import * as actions from '../../src/actions/index';
+import * as actions from '../../src/actions';
 
 describe('actions', () => {
     it('should create an action to update input', () => {
@@ -9,6 +9,6 @@ describe('actions', () => {
             name: 'Title',
             value: 'Testing'
         }
-        expect(actions.updateInput(inputName, inputValue)).toEqual(expectedAction)
+        expect(actions.updateInput(inputName, inputValue)).toEqual(expectedAction);
     });
 });

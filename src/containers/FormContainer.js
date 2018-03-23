@@ -3,7 +3,7 @@ import { updateInput, addToLibrary } from '../actions';
 import Form from '../components/Form';
 
 const getInput = state => {
-    console.log(state);
+    // console.log(state.input);
     return state.input;
 };
 
