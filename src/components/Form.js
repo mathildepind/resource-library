@@ -1,35 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FormField from './FormField';
+import FormField from './FormField'; 
 
-//{updateInput, input, inputRequest}
-
-const Form = ({updateInput, input}) => {
+const Form = ({updateInput, addToLibrary, input}) => {
     return(
         <div>
             <form onSubmit={event => {
                 event.preventDefault();
-                //inputRequest(input);
+                addToLibrary(input);
             }}>
                 <FormField 
                     name='title'
                     label='Title'
                     type='text'
-                    value={input.value}
+                    value={input.title}
                     handleChange = {event => updateInput(event.target.name, event.target.value)}
                 />
                 <FormField
                     name='description'
                     label='Description'
                     type='text'
-                    value={input.value}
+                    value={input.description}
                     handleChange = {event => updateInput(event.target.name, event.target.value)} 
                 />
                 <FormField 
                     name='url'
                     label='URL'
                     type='url'
-                    value={input.value}
+                    value={input.url}
                     handleChange = {event => updateInput(event.target.name, event.target.value)}
                 />
                 <input type='submit' value='Add' />
@@ -40,6 +38,7 @@ const Form = ({updateInput, input}) => {
 
 Form.propTypes = {
     updateInput : PropTypes.func.isRequired,
+    addToLibrary : PropTypes.func, 
     input : PropTypes.object
 };
 

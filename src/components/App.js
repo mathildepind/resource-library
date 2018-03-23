@@ -3,19 +3,17 @@ import '../styles/components/App.scss';
 
 import FormContainer from '../containers/FormContainer';
 
-class App extends React.Component {
-  render(){
-    return (
-      <div>
-        <div className="row app">
-          App will go here
-        </div>
-        <div>
-          <FormContainer />
-        </div>
+const App = () =>{
+  return (
+    <div>
+      <div className="row app">
+        <h1>Resource Library</h1>
       </div>
-    );
-  };
-}
+      <div className="form">
+        <FormContainer />
+      </div>
+    </div>
+  );
+};
 
 export default App;
